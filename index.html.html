@@ -38,7 +38,7 @@
             </div>
         </header>
         <!----------about---------->
-        <div id="about">
+        <section id="about">
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
@@ -80,9 +80,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!----------Service---------->
-        <div id="services">
+        <section id="services">
             <div class="container">
                 <h1 class="sub-title">My Services</h1>
                 <div class="services-list">
@@ -106,9 +106,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!---------portfolio------->
-        <div id="portfolio">
+        <section id="portfolio">
             <div class="container">
                 <hi class="sub-title">My Work</hi>
                  <div class="work-list">
@@ -136,7 +136,7 @@
                     <div class="work">
                         <img src="images/work-3.png">
                         <div class="layer">
-                            <h3>E-commerce App</h3>
+                            <h3>Ecommerce App</h3>
                             <p>The app where you can buy anything in the world. 
                                 Download it from the play store.</p>
                             <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
@@ -145,7 +145,7 @@
                  </div>
                  <a href="#" class="btn">See more</a>
             </div>
-        </div>
+        </section>
         <div id="contact">
             <div class="container">
                 <div class="row">
@@ -179,6 +179,31 @@
             </div>
 
         </div>
-        
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+
+        </script>
+        <script>
+            var sidemeu = document.getElementsById("sidemenu");
+            function openmenu(){
+                sidemeu.style.right = "0";
+            }
+            function closemenu(){
+                sidemeu.style.right = "-200px";
+            }
+        </script>
     </body>
 </html>
